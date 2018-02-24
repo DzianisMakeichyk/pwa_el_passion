@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9123a0f-bb87-4f32-8d9b-9c2e1ba4d641" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sw.js" afterPath="$PROJECT_DIR$/src/sw.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/config.dev.js" afterPath="$PROJECT_DIR$/webpack/config.dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/config.prod.js" afterPath="$PROJECT_DIR$/webpack/config.prod.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.prod.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.prod.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpack/config.prod.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="646">
@@ -46,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sw.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sw.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sw.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+            <state relative-caret-position="555">
+              <caret line="77" column="30" lean-forward="false" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -186,12 +183,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519463626126</updated>
-      <workItem from="1519463627582" duration="11053000" />
+      <workItem from="1519463627582" duration="11682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11053000" />
+    <option name="totallyTimeSpent" value="11682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1074" height="900" extended-state="6" />
@@ -364,14 +361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack/config.prod.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -383,6 +372,14 @@
             <element signature="e#2698#2734#0" expanded="false" />
             <element signature="e#2764#2825#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="77" column="30" lean-forward="false" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

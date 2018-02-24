@@ -33,11 +33,14 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
     event.respondWith(caches.open(CACHE_NAME).then((cache) => {
         return cache.match(event.request).then(function(response) {
+            // If everything ok
             if (response) {
                 return response;
             }
 
+            // If something new or edited (for SPA)
             if (!navigator.isOnline && isHtmlRequest(event.request)) {
+                // index.html (but it SPA)
                 return cache.match(new Request('/index.html'));
             }
 
@@ -51,6 +54,7 @@ self.addEventListener('fetch', (event) => {
 });
 
 function shouldIgnoreRequest(request) {
+    // What files will ignors
     return URLS_TO_IGNORE
         .map((urlPart) => request.url.includes(urlPart))
         .indexOf(true) > -1;
@@ -71,6 +75,7 @@ function fetchAndUpdate(request) {
     if (request.cache === 'only-if-cached' && request.mode !== 'same-origin') return;
 
     return caches.open(CACHE_NAME).then((cache) => {
+        // Created 'new' cache
         return fetchCors(request).then((response) => {
             // foreign requests may be res.type === 'opaque' and missing a url
             if (!response.url) return response;
