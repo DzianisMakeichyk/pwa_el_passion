@@ -88,7 +88,7 @@ module.exports = {
 
     new ServiceWorkerWebpackPlugin({
         entry: paths.serviceWorker,
-        excludes: ['_redirects']
+        excludes: ['_redirects'],
     }),
   ],
   devServer: {
