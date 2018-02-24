@@ -1,5 +1,5 @@
 const CACHE_NAME = 'vivino-cache-v3';
-const URLS_TO_IGNORE = ['chrome-extension', 'sockjs-node', '/wines'];
+const URLS_TO_IGNORE = ['chrome-extension', 'sockjs-node'];
 const { assets } = global.serviceWorkerOption;
 
 // cache our bundle assets
