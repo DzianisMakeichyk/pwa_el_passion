@@ -16,7 +16,15 @@ self.addEventListener('install', (event) => {
 
 // remove old caches
 self.addEventListener('activate', (event) => {
-
+    // Delete cache (When refresh browser or close browser tab)
+    event.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(
+                keys.filter(key => key !== CACHE_NAME)
+                    .map(key => caches.delere(key))
+            );
+        })
+    );
 });
 
 self.addEventListener('fetch', (event) => {
