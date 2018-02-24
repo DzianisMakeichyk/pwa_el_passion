@@ -1,12 +1,27 @@
 {
-  "name": "Vivino Progressive Web App",
+  "name": "Vivino",
   "short_name": "Vivino",
+  "author": "EL Passion",
   "start_url": "/",
-  "display": "standalonr",
+  "display": "standalone",
+  "background_color": "#e5d7bf",
+  "theme_color": "#cfb489",
+  "description": "Best place to choose your wine",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
-      "size": "192x192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
