@@ -1,0 +1,13 @@
+{
+  "name": "Vivino Progressive Web App",
+  "short_name": "Vivino",
+  "start_url": "/",
+  "display": "standalonr",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "size": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
