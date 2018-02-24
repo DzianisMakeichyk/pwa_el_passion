@@ -18,5 +18,8 @@ if (module.hot) {
 }
 
 if('serviceWorker' in navigator) {
+    // Przy odświerzeniu -> idzie rejstracja ws
     const registration = runtime.register()
+
+    console.log(registration)
 }
