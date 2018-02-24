@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vivino-cache-v3';
+const CACHE_NAME = 'vivino-cache-v4';
 const URLS_TO_IGNORE = ['chrome-extension', 'sockjs-node'];
 const { assets } = global.serviceWorkerOption;
 
@@ -63,7 +63,7 @@ function shouldIgnoreRequest(request) {
 function isHtmlRequest(request) {
     return request.headers.get('accept').includes('text/html');
 }
-
+// de-Bugs!!
 function fetchCors(request) {
     return fetch(new Request(request), { mode: 'cors', credentials: 'same-origin' });
 }
