@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const paths = require('./paths');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
-const path = require('path');
 
 module.exports = {
   entry: [

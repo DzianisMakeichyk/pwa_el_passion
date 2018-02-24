@@ -6,6 +6,11 @@ import { AppContainer } from 'react-hot-loader';
 import App from './components/App';
 import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 
+if('serviceWorker' in navigator) {
+    // Przy odświerzeniu -> idzie rejestracja ws
+    const registration = runtime.register()
+}
+
 render(
   <AppContainer>
     <App />
@@ -15,9 +20,4 @@ render(
 
 if (module.hot) {
   module.hot.accept();
-}
-
-if('serviceWorker' in navigator) {
-    // Przy odświerzeniu -> idzie rejestracja ws
-    const registration = runtime.register()
 }

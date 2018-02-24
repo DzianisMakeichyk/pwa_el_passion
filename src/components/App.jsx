@@ -12,18 +12,30 @@ import ItemShow from './ItemShow';
 class App extends Component {
   state = {
     wines: [],
+    isOffline: false,
+    areWeOnline: navigator.onLine
   };
 
   componentDidMount() {
     this.getData();
+
+      window.addEventListener('online', this.upDateStatus);
+
+      window.addEventListener('offline', this.upDateStatus);
+
+      this.upDateStatus()
   }
+
+  upDateStatus = () => {
+      this.setState({ isOffline: !navigator.onLine });
+  };
 
   getData = () => {
     fetch('https://api-wine.herokuapp.com/api/v1/wines')
       .then(res => res.json())
       .then(data => {
         this.setState({ wines: data });
-      })
+      });
 
   };
 
@@ -48,9 +60,15 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <Router>
         <Fragment>
+          {this.state.isOffline && (
+              <div>
+                Hello is online!
+              </div>
+          )}
           {this.renderContent()}
         </Fragment>
       </Router>
