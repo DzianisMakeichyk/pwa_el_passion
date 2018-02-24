@@ -1,0 +1,13 @@
+.Filters {
+  display: flex;
+  align-items: center;
+  padding: 0 $spacing-default;
+
+  &__clear{
+    @extend %close;
+
+    &--visible {
+      @extend %close-visible;
+    }
+  }
+}

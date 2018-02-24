@@ -1,0 +1,22 @@
+$lg: 480px;
+
+$screen-sm: 'only screen and (max-width: #{$lg})';
+$screen-lg: 'only screen and (min-width: #{$lg + 1})';
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  background: $mint;
+}
+
+.container {
+  position: relative;
+  min-height: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  background-color: $background;
+}

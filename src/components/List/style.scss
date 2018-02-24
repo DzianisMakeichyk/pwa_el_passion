@@ -1,0 +1,13 @@
+.List {
+  padding: ($nav-height + $spacing-default) $spacing-default $spacing-default;
+  list-style: none;
+
+  &__container {
+    padding-bottom: $tab-bar-height;
+  }
+
+  &__empty {
+    margin: 1em 0;
+    text-align: center;
+  }
+}

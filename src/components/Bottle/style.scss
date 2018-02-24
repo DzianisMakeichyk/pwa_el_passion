@@ -1,0 +1,81 @@
+.Bottle {
+  $animation-bottom-level: 95px;
+  $aniamtion-wave-amplitude: 3px;
+  $animation-wave-length: 21.5px;
+
+  @mixin generateKeyframes ($name, $steps, $negative: false) {
+    $keyfarme-name: $name;
+    $sign: 1;
+
+    @if $negative {
+      $keyfarme-name: #{$name}-negative;
+      $sign: -1;
+    }
+
+    @keyframes #{$keyfarme-name} {
+      @each $position, $x, $y in $steps {
+        #{$position} { transform: translate(($sign * $x), ($sign * $y))}
+      }
+    }
+  }
+
+  @mixin setAnimation($name, $steps, $duration: 1.5s) {
+    @include generateKeyframes($name, $steps);
+    @include generateKeyframes($name, $steps, true);
+
+    .Bottle__liquid,
+    #Bottle__clip {
+      animation: #{$name} $duration linear infinite;
+    }
+
+    #Bottle__clip {
+      animation-name: #{$name}-negative;
+    }
+  }
+
+  &__fill {
+    fill: $grey;
+  }
+
+  &__stroke,
+  &__liquid {
+    display: none;
+  }
+
+  &--empty,
+  &--loading {
+    .Bottle__stroke,
+    .Bottle__liquid {
+      display: initial;
+      fill: $grey;
+    }
+
+    .Bottle__fill {
+      fill: transparent;
+    }
+
+    .Bottle__liquid {
+      fill: $primary;
+    }
+  }
+
+  &--empty {
+    $steps: (
+      (0%, 0, $animation-bottom-level),
+      (50%, $animation-wave-length/2, $animation-bottom-level + $aniamtion-wave-amplitude),
+      (100%, $animation-wave-length, $animation-bottom-level),
+    );
+
+    @include setAnimation('wave', $steps);
+  }
+
+  &--loading {
+    $steps: (
+        (0%, 0, $animation-bottom-level),
+        (90%, $animation-wave-length, 0),
+        (100%, 0, $animation-bottom-level),
+    );
+
+    @include setAnimation('rise', $steps, 3s);
+  }
+}

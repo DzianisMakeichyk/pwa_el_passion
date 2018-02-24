@@ -1,0 +1,16 @@
+.Star {
+  color: $grey;
+
+  > polygon {
+    stroke: $white;
+    stroke-width: 0.5px;
+  }
+
+  &--active {
+    color: $primary;
+
+    > polygon {
+      stroke: none;
+    }
+  }
+}

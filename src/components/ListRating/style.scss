@@ -1,0 +1,15 @@
+.ListRating {
+  padding: 15px 5px;
+
+  &__text {
+    margin-left: 15px;
+  }
+
+  &__value {
+    color: $text-distinguished;
+  }
+
+  &__limit {
+    color: $dark-grey;
+  }
+}

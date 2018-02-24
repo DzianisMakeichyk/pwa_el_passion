@@ -1,0 +1,89 @@
+.ListItem {
+  $photo-whidth: 60px;
+  $photo-height: 100px;
+  $spacing: 1.5 * $spacing-default;
+
+  background-color: $white;
+  border-radius: $radius-default;
+  margin-bottom: $spacing-default;
+
+  &__main,
+  &__footer {
+    display: flex;
+    align-items: center;
+  }
+
+  &__main,
+  &__footer-action {
+    padding: $spacing;
+  }
+
+  &__photo {
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__photo-container {
+    position: relative;
+    display: flex;
+    height: $photo-height;
+    flex: 0 0 $photo-whidth;
+    justify-content: center;
+    margin-right: $spacing;
+  }
+
+  &__title {
+    @extend %font-default;
+    @extend %margin-clean;
+
+    line-height: 1.15;
+    margin-bottom: $spacing;
+  }
+
+  &__annotation {
+    @extend %font-default;
+    @extend %font-uppercase;
+    @extend %margin-clean;
+
+    display: flex;
+    align-items: center;
+    margin: ($spacing / 2) 0;
+    font-size: map-get($font-sizes, 'tiny');
+    color: $dark-grey;
+
+    &--small {
+      font-size: map-get($font-sizes, 'pico');
+    }
+  }
+
+  &__icon {
+    @extend %margin-clean-horizontal;
+
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: -.15em;
+    margin-left: .5em;
+    margin-right: .5em;
+    border-radius: 50%;
+  }
+
+  &__footer {
+    border-top: border-default();
+  }
+
+  &__footer-item {
+    flex: 1 0 50%;
+    text-align: center;
+  }
+
+  &__footer-action {
+    @extend %font-uppercase;
+
+    border-left: border-default();
+
+    &:first-child {
+      border-left: 0;
+    }
+  }
+}

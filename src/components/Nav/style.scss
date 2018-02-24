@@ -1,0 +1,42 @@
+.Nav {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: $nav-height;
+  max-width: $container-width;
+  transition: background-color .2s, box-shadow .2s;
+
+  &__actions {
+    padding: (2 * $spacing-default) $spacing-default;
+    display: flex;
+  }
+
+  &__filters {
+    padding-bottom: 5px;
+  }
+
+  &__back {
+    align-self: flex-start;
+    margin-right: 2 * $spacing-default;
+    flex-shrink: 0;
+    padding: .4em 0;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__annotation {
+    @extend %margin-clean;
+
+    margin-top: 5px;
+  }
+
+  &--opaque {
+    background-color: $white;
+    box-shadow: $shadow-default;
+  }
+}

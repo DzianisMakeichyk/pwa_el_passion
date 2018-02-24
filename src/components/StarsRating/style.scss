@@ -1,0 +1,25 @@
+.StarsRating {
+  &__star + &__star {
+    margin-left: 2px;
+  }
+
+  &__stars {
+    &--active {
+      position: absolute;
+      display: flex;
+      top: 0;
+      overflow: hidden;
+      left: 0;
+      width: 70%;
+    }
+  }
+
+  &__stars-wrapper {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__stars-overflow {
+    display: flex;
+  }
+}

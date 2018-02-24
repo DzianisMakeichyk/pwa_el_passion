@@ -1,0 +1,16 @@
+.ItemDetail {
+  background: $white;
+  padding: 40px 30px;
+
+  &__section:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    line-height: 1.5;
+  }
+}

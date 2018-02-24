@@ -1,0 +1,28 @@
+.Filter {
+  flex: 1 1 1px;
+  margin-right: $spacing-default/2;
+  text-align: center;
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    @extend %margin-clean-horizontal;
+
+    display: inline-block;
+    padding: (.75 * $spacing-default) ($spacing-default/2);
+    border-radius: 2px;
+    margin: 0 auto;
+    color: $dark-grey;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    transition: background-color .2s, color .2s;
+
+    .Filter__input:checked + & {
+      background-color: $primary;
+      color: $white
+    }
+  }
+}

@@ -1,0 +1,10 @@
+$container-width: 480px;
+$tab-bar-height: 72px;
+$spacing-default: 10px;
+$radius-default: 8px;
+$nav-height: 100px;
+$shadow-default: 0 0 15px $shadow-light;
+
+@function border-default() {
+  @return 1px solid $border-color;
+}

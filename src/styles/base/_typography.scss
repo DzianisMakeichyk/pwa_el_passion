@@ -1,0 +1,50 @@
+%font-default {
+  font-family: Roboto, serif;
+}
+
+%font-distinguished {
+  font-family: Cabin, serif;
+}
+
+$font-sizes: (
+  pico: .625rem,
+  tiny: .75rem,
+  small: .875rem,
+  default: 1rem,
+  medium: 1.25rem,
+  large: 1.5rem,
+);
+
+%font-heading {
+  @extend %font-distinguished;
+
+  margin-top: 0;
+  font-size: map-get($font-sizes, 'medium');
+  font-weight: 700;
+  line-height: 1.2;
+  color: $text-distinguished;
+}
+
+%font-text {
+  @extend %font-default;
+
+  font-size: map-get($font-sizes, 'small');
+  font-weight: 400;
+  color: $text;
+}
+
+%font-uppercase {
+  font-size: map-get($font-sizes, 'small');
+  font-weight: 500;
+  letter-spacing: .05em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body {
+  @extend %font-text;
+}
+
+h1, h2, h3, h4, h5, h6 { /* stylelint-disable-line selector-list-comma-newline-after */
+  @extend %font-heading;
+}
