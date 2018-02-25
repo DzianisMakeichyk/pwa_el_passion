@@ -3,6 +3,7 @@ import { array } from 'prop-types';
 import ListItem from '../ListItem';
 import Filters from '../Filters';
 import Nav from '../Nav';
+import {Helmet} from "react-helmet";
 import './style.scss';
 
 class List extends Component {
@@ -34,7 +35,10 @@ class List extends Component {
             selectedValue={this.state.maxPrice}
           />
         </Nav>
-
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>{this.props.name}</title>
+        </Helmet>
         <ul className="List">
           {visibleItems.length ? visibleItems.map(item => (
             <ListItem key={item.id} {...item} />
