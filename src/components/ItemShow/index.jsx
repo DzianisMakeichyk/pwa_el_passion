@@ -6,6 +6,7 @@ import StarsRating from '../StarsRating';
 import BottleSvg from '../../svg-components/Bottle';
 import ItemDetail from '../ItemDetail';
 import Nav from '../Nav';
+import {Helmet} from "react-helmet";
 import './style.scss';
 
 const ItemShow = ({ match, items, history }) => {
@@ -17,6 +18,10 @@ const ItemShow = ({ match, items, history }) => {
 
   return (
       <article className="ItemShow">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>{item.name}</title>
+        </Helmet>
         <Nav back title={item.name} annotation={`${item.color}, ${item.region}, ${item.country}`} />
 
         <div className="ItemShow__inner">
